@@ -1,0 +1,22 @@
+{
+  "server": {
+    "command": "yomo serve -c yomo.config.ai.bridge.yaml",
+    "port": 8000,
+    "workdir": ".",
+    "env": {}
+  },
+  "request": {
+    "headers": {
+      "content-type": "application/json"
+    }
+  },
+  "tools": [
+    {
+      "name": "weather",
+      "start": {
+        "command": "yomo run",
+        "workdir": "./tools/weather"
+      }
+    }
+  ]
+}
